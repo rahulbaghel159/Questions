@@ -1,5 +1,6 @@
 package longestsubstring
 
+//https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/2961/
 func lengthOfLongestSubstring(s string) int {
 	start, end := 0, 0
 	maxLength := 0
