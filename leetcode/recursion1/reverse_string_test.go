@@ -31,3 +31,29 @@ func Test_reverseString(t *testing.T) {
 		})
 	}
 }
+
+func Test_reverseString2(t *testing.T) {
+	type args struct {
+		s []byte
+	}
+	tests := []struct {
+		name string
+		args args
+		want []byte
+	}{
+		{
+			name: "Test Case 1",
+			args: args{
+				s: []byte("hello"),
+			},
+			want: []byte("olleh"),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := reverseString2(tt.args.s); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("reverseString2() = %v, want %v", string(got), string(tt.want))
+			}
+		})
+	}
+}

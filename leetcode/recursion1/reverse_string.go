@@ -20,3 +20,13 @@ func reverseString(s []byte) {
 	//recursing
 	reverseString(s[l+1 : r])
 }
+
+func reverseString2(s []byte) []byte {
+	//breaking condition
+	if len(s) == 1 {
+		return s
+	}
+
+	//processing and recursing
+	return append(reverseString2(s[1:]), s[0])
+}
