@@ -10,6 +10,21 @@
   revision = "2b758aa73013d2b1f11077aeca87ea042a1438bf"
 
 [[projects]]
+  digest = "1:c54ef9a79cec2d2a687e7a93100fff7069f05ba1e5299eed906155982a98fd16"
+  name = "github.com/emirpasic/gods"
+  packages = [
+    "containers",
+    "lists",
+    "lists/arraylist",
+    "stacks",
+    "stacks/arraystack",
+    "utils",
+  ]
+  pruneopts = "UT"
+  revision = "1615341f118ae12f353cc8a983f35b584342c9b3"
+  version = "v1.12.0"
+
+[[projects]]
   branch = "master"
   digest = "1:87ccd3930fecd2fda7b482c7914f73f89c85c2f1854ef009d187f81362630c69"
   name = "go4.org"
@@ -20,6 +35,9 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/bradfitz/slice"]
+  input-imports = [
+    "github.com/bradfitz/slice",
+    "github.com/emirpasic/gods/stacks/arraystack",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
