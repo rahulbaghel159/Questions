@@ -1,4 +1,4 @@
-package amazon
+package random
 
 func isRobotBounded(instructions string) bool {
 	var (
