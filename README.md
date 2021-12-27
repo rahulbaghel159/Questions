@@ -17,4 +17,4 @@ Task | Solution
 ## Arrays & Strings
 Task | Solution
 -----|---------
-[3 Sum](https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/2966/) | [Golang](/leetcode/amazon/3sum/3sum.go)
+[3 Sum](https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/2966/) | [Golang](/leetcode/amazon/arrays3sum/3sum.go)
