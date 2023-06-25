@@ -1,6 +1,8 @@
 package google
 
-import "testing"
+import (
+	"testing"
+)
 
 func Test_longestPalindrome(t *testing.T) {
 	type args struct {
@@ -45,6 +47,13 @@ func Test_longestPalindrome(t *testing.T) {
 				s: "aaaa",
 			},
 			want: "aaaa",
+		},
+		{
+			name: "Test Case 6",
+			args: args{
+				s: "aacabdkacaa",
+			},
+			want: "aca",
 		},
 	}
 	for _, tt := range tests {
