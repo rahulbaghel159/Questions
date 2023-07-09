@@ -17,7 +17,7 @@ func maxConsecutiveAnswers(answerKey string, k int) int {
 
 		if conf <= k {
 			maxLen++
-		} else {w
+		} else {
 			if answerKey[start] == 'T' {
 				countT--
 			} else {
