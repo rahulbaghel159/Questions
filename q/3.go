@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func isEqual(str1, str2 string) bool {
 	if len(str1) != len(str2) {
 		return false
@@ -45,8 +43,8 @@ func countCharacters(str string) map[rune]int {
 	return countMap
 }
 
-func main() {
-	fmt.Println(isEqual("aab", "aba"))
-	fmt.Println(isEqual("aab", "abc"))
-	fmt.Println(isEqual("aab", "abcd"))
-}
+// func main() {
+// 	fmt.Println(isEqual("aab", "aba"))
+// 	fmt.Println(isEqual("aab", "abc"))
+// 	fmt.Println(isEqual("aab", "abcd"))
+// }
