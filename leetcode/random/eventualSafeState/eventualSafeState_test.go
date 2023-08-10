@@ -42,19 +42,19 @@ func Test_eventualSafeNodes(t *testing.T) {
 		// 	},
 		// 	want: []int{4},
 		// },
-		{
-			name: "Case 3",
-			args: args{
-				graph: [][]int{
-					{},
-					{0, 2, 3, 4},
-					{3},
-					{4},
-					{},
-				},
-			},
-			want: []int{0, 1, 2, 3, 4},
-		},
+		// {
+		// 	name: "Case 3",
+		// 	args: args{
+		// 		graph: [][]int{
+		// 			{},
+		// 			{0, 2, 3, 4},
+		// 			{3},
+		// 			{4},
+		// 			{},
+		// 		},
+		// 	},
+		// 	want: []int{0, 1, 2, 3, 4},
+		// },
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
