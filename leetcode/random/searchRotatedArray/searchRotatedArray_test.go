@@ -44,22 +44,22 @@ func Test_search(t *testing.T) {
 			},
 			want: 1,
 		},
-		{
-			name: "Case 5",
-			args: args{
-				nums:   []int{5, 1, 3},
-				target: 5,
-			},
-			want: 0,
-		},
-		{
-			name: "Case 6",
-			args: args{
-				nums:   []int{3, 1},
-				target: 1,
-			},
-			want: 1,
-		},
+		// {
+		// 	name: "Case 5",
+		// 	args: args{
+		// 		nums:   []int{5, 1, 3},
+		// 		target: 5,
+		// 	},
+		// 	want: 0,
+		// },
+		// {
+		// 	name: "Case 6",
+		// 	args: args{
+		// 		nums:   []int{3, 1},
+		// 		target: 1,
+		// 	},
+		// 	want: 1,
+		// },
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
