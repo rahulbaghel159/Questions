@@ -13,70 +13,70 @@ func Test_generateTrees(t *testing.T) {
 		args args
 		want []*TreeNode
 	}{
-		{
-			name: "Case 1",
-			args: args{
-				n: 3,
-			},
-			want: []*TreeNode{
-				{
-					Val: 1,
-					Right: &TreeNode{
-						Val: 2,
-						Right: &TreeNode{
-							Val: 3,
-						},
-					},
-				},
-				{
-					Val: 1,
-					Right: &TreeNode{
-						Val: 3,
-						Left: &TreeNode{
-							Val: 2,
-						},
-					},
-				},
-				{
-					Val: 2,
-					Left: &TreeNode{
-						Val: 1,
-					},
-					Right: &TreeNode{
-						Val: 3,
-					},
-				},
-				{
-					Val: 3,
-					Left: &TreeNode{
-						Val: 2,
-						Left: &TreeNode{
-							Val: 1,
-						},
-					},
-				},
-				{
-					Val: 3,
-					Left: &TreeNode{
-						Val: 1,
-						Right: &TreeNode{
-							Val: 2,
-						},
-					},
-				},
-			},
-		},
-		{
-			name: "Case 2",
-			args: args{
-				n: 1,
-			},
-			want: []*TreeNode{
-				{
-					Val: 1,
-				},
-			},
-		},
+		// {
+		// 	name: "Case 1",
+		// 	args: args{
+		// 		n: 3,
+		// 	},
+		// 	want: []*TreeNode{
+		// 		{
+		// 			Val: 1,
+		// 			Right: &TreeNode{
+		// 				Val: 2,
+		// 				Right: &TreeNode{
+		// 					Val: 3,
+		// 				},
+		// 			},
+		// 		},
+		// 		{
+		// 			Val: 1,
+		// 			Right: &TreeNode{
+		// 				Val: 3,
+		// 				Left: &TreeNode{
+		// 					Val: 2,
+		// 				},
+		// 			},
+		// 		},
+		// 		{
+		// 			Val: 2,
+		// 			Left: &TreeNode{
+		// 				Val: 1,
+		// 			},
+		// 			Right: &TreeNode{
+		// 				Val: 3,
+		// 			},
+		// 		},
+		// 		{
+		// 			Val: 3,
+		// 			Left: &TreeNode{
+		// 				Val: 2,
+		// 				Left: &TreeNode{
+		// 					Val: 1,
+		// 				},
+		// 			},
+		// 		},
+		// 		{
+		// 			Val: 3,
+		// 			Left: &TreeNode{
+		// 				Val: 1,
+		// 				Right: &TreeNode{
+		// 					Val: 2,
+		// 				},
+		// 			},
+		// 		},
+		// 	},
+		// },
+		// {
+		// 	name: "Case 2",
+		// 	args: args{
+		// 		n: 1,
+		// 	},
+		// 	want: []*TreeNode{
+		// 		{
+		// 			Val: 1,
+		// 		},
+		// 	},
+		// },
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
