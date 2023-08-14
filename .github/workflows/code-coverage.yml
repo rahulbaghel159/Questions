@@ -24,10 +24,10 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ^1.14
-        id: go
       - name: Check out code into the Go module directory
         uses: actions/checkout@v3
-      - name: Test
+      - name: Execute Test
+        id: execute_test
         run: |
           CVPKG=$(go list ./... | grep -v -e mocks -e cmd -e model -e scripts | tr '\n' ',')
           go test -coverpkg=${CVPKG} -coverprofile=coverage.out -covermode=count  ./...
@@ -37,5 +37,5 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            _(execution **${{ steps.Test.outputs.coverage }}**)_
+            _Code Coverage: ${{ steps.execute_test.outputs.coverage }}_
           comment_tag: execution
