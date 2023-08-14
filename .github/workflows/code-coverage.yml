@@ -1,7 +1,7 @@
 name: CodeCov
 
 on:
-  push:
+  pull_request:
     branches: 
       - master
 
@@ -31,7 +31,8 @@ jobs:
         run: |
           CVPKG=$(go list ./... | grep -v -e mocks -e cmd -e model -e scripts | tr '\n' ',')
           go test -coverpkg=${CVPKG} -coverprofile=coverage.out -covermode=count  ./...
-      - name: Publish Code Coverage 
+      - name: Comment PR with code coverage
+        uses: thollander/actions-comment-pull-request@v2
         run: |
           set -x
           total=`go tool cover -func=coverage.out | grep total | grep -Eo '[0-9]+\.[0-9]+'`
@@ -42,3 +43,7 @@ jobs:
           else
             COLOR=orange
           fi
+        with:
+          message: |
+            _(execution **${{ total }}** / attempt **${{ COLOR }}**)_
+          comment_tag: execution
