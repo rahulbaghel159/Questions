@@ -37,5 +37,5 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            _Code Coverage: ${{ steps.execute_test.outputs.coverage }}_
+            _Test Passed with Code Coverage: ${{ steps.execute_test.outputs.coverage }}_
           comment_tag: execution
