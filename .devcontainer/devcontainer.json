@@ -3,7 +3,9 @@
 {
 	"name": "Go",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/go:0-1.20-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.21-bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/go:1": {},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {},
@@ -13,9 +15,6 @@
 		"ghcr.io/guiyomh/features/gomarkdoc:0": {},
 		"ghcr.io/azutake/devcontainer-features/go-packages-install:0": {}
 	}
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
