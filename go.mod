@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/bradfitz/slice v0.0.0-20180809154707-2b758aa73013
-	github.com/emirpasic/gods v1.12.0
+	github.com/emirpasic/gods v1.18.1
 	github.com/stretchr/testify v1.7.0
 )
 
