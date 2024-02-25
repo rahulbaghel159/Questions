@@ -7,10 +7,12 @@ import (
 )
 
 // https://leetcode.com/problems/basic-calculator
-// incomplete
-func evaluateExpr(st str_stack) int {
+func evaluateExpr(st str_stack) (int, str_stack) {
 	if st.isEmpty() || !(reflect.TypeOf(st.peek()).Name() == "int") {
-		st.push("0")
+		_, err := strconv.Atoi(st.peek())
+		if err != nil {
+			st.push("0")
+		}
 	}
 
 	res, _ := strconv.Atoi(st.pop())
@@ -26,7 +28,7 @@ func evaluateExpr(st str_stack) int {
 		}
 	}
 
-	return res
+	return res, st
 }
 
 func calculate(s string) int {
@@ -46,7 +48,8 @@ func calculate(s string) int {
 				n, operand = 0, 0
 			}
 			if s[i] == '(' {
-				res := evaluateExpr(st)
+				var res int
+				res, st = evaluateExpr(st)
 				st.pop()
 				st.push(strconv.Itoa(res))
 			} else {
@@ -59,7 +62,9 @@ func calculate(s string) int {
 		st.push(strconv.Itoa(operand))
 	}
 
-	return evaluateExpr(st)
+	res, _ := evaluateExpr(st)
+
+	return res
 }
 
 func isDigit(r rune) bool {

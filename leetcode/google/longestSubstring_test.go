@@ -70,7 +70,7 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := LengthOfLongestSubstring(tt.args.s); got != tt.want {
+			if got := lengthOfLongestSubstring(tt.args.s); got != tt.want {
 				t.Errorf("LengthOfLongestSubstring() = %v, want %v", got, tt.want)
 			}
 		})
